@@ -1,30 +1,104 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Parc animalier</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parc de la Barben</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
 </head>
 <body>
-    <header class="header">
-
-        <a href="#" class="logo"> <i class="fas fa-paw"></i> zoo</a>
-
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#billetrie">billetrie</a>
-           
-            <a href="#animal">animal</a>
-            <a href="#connexion">connexion</a>
-            <a href="#inscription">inscription</a>
-            <a href="#contact">contact</a>
+    <header>
+        <img class="logo" src="images_i/logoparc.png" alt="Logo du Parc">
+        <button class="btnmenu"><ion-icon name="menu"></ion-icon></button>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="#billetterie.html">Billetterie</a>
+            <a href="#animaux.html">Animaux</a>
+            <a href="#services.html">Services</a>
         </nav>
+        <button class="btnlogin"><ion-icon name="person"></ion-icon></button>
 
-        <div class="icons">
-            <div id="login-btn" class="fas fa-user"></div>
-            <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    
+    <div class="wrapper hidden" id="popup">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Connexion</h2>
+            <form action="#">
+                <div class="input box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Mot de Passe</label>
+                </div>
+                <div class="remember-forgot">
+                    <a href="#forgot-pass">Mot de Passe oublié</a>
+                </div>
+                <button type="submit" class="btnlog">Se connecter</button>
+                <div class="login-register">
+                    <p>Vous n’avez pas de compte ?<a href="register.html" class="register-link">Inscrivez-vous</a></p>
+                </div>
+            </form>
         </div>
+    </div>
 
-  
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="tigre" src="images_i/tigre.jpg" alt="tigre">
+                <img id="girafe" src="images_i/girafe.jpg" alt="girafe">
+                <img id="panda-roux" src="images_i/panda-roux.jpg" alt="panda-roux">
+                <img id="ara" src="images_i/ara.jpg" alt="ara">
+            </div>
+            <div class="slider-nav">
+                <a href="#tigre"></a>
+                <a href="#girafe"></a>
+                <a href="#panda-roux"></a>
+                <a href="#ara"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="parc-plan">
+        <h2>BIENVENUE AU PARC ANIMALIER DE LA BARBEN !</h2>
+        <h3>Le parc est ouvert tous les jours, y compris les jours fériés.</h3>
+        <p>Au cœur de la Provence et d’un site Natura 2000, le Parc animalier de La Barben est une invitation à l’évasion.
+9 km de sentiers vous guident à la rencontre de 130 espèces différentes, à l’ombre des chênes.</p>
+        <h2>Plan du Parc</h2>
+        <img src="images_i/zoo-map.jpg" alt="Plan du Parc" class="plan-image">
+    </section>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images_i/logoparc.png" alt="Logo" />
+          </div>
+      
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#">Contact </a></li>
+              <li><a href="#">Contact </a></li>
+              <li><a href="#">Contact </a></li>
+              <li><a href="#">Contact </a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-search">
+            <input type="text" placeholder="Rechercher sur le site" />
+            <button type="submit"><ion-icon name="search"></ion-icon></button>
+          </div>
+        </div>
+      </footer>
+      
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
