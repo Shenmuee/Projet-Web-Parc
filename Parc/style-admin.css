@@ -126,7 +126,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 50;
+  z-index: 20;
 }
 
 .hidden {
@@ -248,60 +248,109 @@ header {
   text-decoration: none;
 }
 
-.services {
+
+.log {
+  position: absolute ;
   text-align: center;
-  padding: 50px 0;
-  background-color: var(--secondary-color);
-}
-
-.services h1 {
-  font-size: 2.5em;
-  color: var(--main-color);
-  margin-bottom: 10px;
-}
-
-.services p {
-  color: var(--text-color);
-  font-size: 1.2em;
-  margin-bottom: 40px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.service-card {
-  background: var(--text-light);
+  top: 50%;
+  left: 50%;
+  padding-bottom: 10px;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  background-color: #0000006d;
   border-radius: 10px;
-  box-shadow: 0 4px 6px var(--shadow-color);
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px var(--shadow-color);
-}
-
-.service-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  z-index: 25;
 }
 
-.service-card h2 {
-  font-size: 1.5em;
-  color: var(--main-color);
-  margin: 15px 0;
+.log h1 {
+  color: #ff9100;
 }
 
-.service-card p {
-  padding: 0 15px 20px;
-  font-size: 1em;
-  color: var(--text-color);
+.log p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
 }
+.log a {
+  color: #ff6200;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+section {
+  background-color: hsl(36, 60%, 81%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+section h2 {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section form input[type="text"],
+section form input[type="number"],
+section form input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #e68900;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+section form button {
+  background-color: #e67e00;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+section form button:hover {
+  background-color: #cc6d00;
+}
+
+section .success {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+section .error {
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
 
 footer {
   background-color: #ff6600; 
