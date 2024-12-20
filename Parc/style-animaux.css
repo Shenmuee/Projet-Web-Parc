@@ -21,7 +21,7 @@ header {
   padding: 0 10%;
   width: 100%;
   height: 70px;
-  background-color: rgba(255, 102, 0, 0.8); 
+  background-color: rgba(255, 102, 0, 0.725); 
   z-index: 10;
 }
 
@@ -113,9 +113,10 @@ header {
 
 .wrapper {
   position: absolute;
-  top: 10%;
-  margin-left: 73%;
-  margin-top: -5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 400px;
   height: 440px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -247,223 +248,170 @@ header {
   color: #ff6600;
   text-decoration: none;
 }
-
-
-.log {
-  position: absolute ;
+.hero-section {
+  position: relative;
+  background-image: url('images_i/biomes.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 400px; 
+  color: white; 
   text-align: center;
-  top: 50%;
-  left: 50%;
-  padding-bottom: 10px;
-  transform: translate(-50%, -50%);
-  max-width: 600px;
-  background-color: #0000006d;
-  border-radius: 10px;
-  width: 100%;
-  z-index: 25;
-}
-
-.log h1 {
-  color: #ff9100;
-}
-
-.log p {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-}
-.log a {
-  color: #ff6200;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-.slider-wrapper {
-  position: absolute; 
-  width: 100%;
-  top: 0;
-  left: 0;
-	margin: 0 ;
-}
-
-.slider {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-	
-}
-
-.slider::-webkit-scrollbar {
-	display: none;
-}
-
-
-.slider img {
-	flex: 1 0 100%;
-	scroll-snap-align: start;
-	object-fit: cover;
-}
-
-.slider-nav {
-	display: flex;
-	column-gap: 1rem;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 4;
-}
-
-.slider-nav a {
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background-color: #fff;
-	opacity: 0.75;
-	transition: opacity ease 250ms;
-  cursor: pointer;
-}
-
-.slider-nav a:hover {
-	opacity: 1;
-}
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  z-index: 15;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.3s; 
 }
 
-.slider-arrow:hover {
-  background-color: #ff6600;
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
 }
 
-.slider-arrow:hover ion-icon {
-  color: #fff;
+.hero-text h2 {
+  font-size: 36px;
+  margin-top: 10px;
 }
 
-.slider-prev {
-  left: 20px;
-}
-
-.slider-next {
-  right: 20px;
-}
-
-.parc-plan {
+h1 {
   text-align: center;
-  padding: 40px 10%;
-  margin-top: 100vh; 
+  margin-top: 40px;
+  font-size: 36px;
+  color: #333;
 }
 
-.parc-plan h2 {
-  font-size: 2em;
-  color: #ff6600;
-}
-.parc-plan h3 {
-  font-size: 1.5em;
-  color: #ff6600;
-  margin-bottom: 20px;
-}
-.parc-plan p {
-  color: #2a2725;
-  margin-bottom: 20px;
-}
-
-.plan-image {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 800px; 
-  height: auto;
-  border-radius: 10px;
+.biome {
+  margin: 40px 40px;
+  padding: 20px;
+  background-color: #faefe5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.biome h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.biome p {
+  color: #666;
+  font-size: 16px;
+}
+
+.enclosures {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.enclosure {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: inline-block;
+  width: 15%; 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.enclosure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.enclosure img {
+  width: 100px;
+  height: auto; 
+  object-fit: cover; 
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto; 
   object-fit: cover;
+  display: block;
+}
+
+.animal-name{
+  color: orange;
+  background-color: #f9f77974;
+  z-index: 10;
+
 }
 
 
 footer {
-  background-color: #ff6600; 
-  padding: 20px 0;
-  color: white;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-logo img {
-  width: 300px; 
-}
-
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-contact h3 {
-  margin-bottom: 10px;
-  font-size: 1.5em;
-}
-
-.footer-contact ul {
-  list-style: none;
-}
-
-.footer-contact a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s;
-}
-
-.footer-contact a:hover {
-  color: rgb(180, 180, 180); /
-}
-
-.footer-search {
-  display: flex;
-  align-items: center;
-}
-
-.footer-search input {
-  padding: 10px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  width: 250px;
-}
-
-.footer-search button {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #ff6a00;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  font-size: 1.2em;
-}
-
-.footer-search button:hover {
-  background-color: rgb(205, 204, 204);
-}
+    background-color: #ff6600; 
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    width: 300px; 
+  }
+  
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-contact h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .footer-contact ul {
+    list-style: none;
+  }
+  
+  .footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .footer-contact a:hover {
+    color: rgb(180, 180, 180); /
+  }
+  
+  .footer-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-search input {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .footer-search button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ff6a00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.2em;
+  }
+  
+  .footer-search button:hover {
+    background-color: rgb(205, 204, 204);
+  }
